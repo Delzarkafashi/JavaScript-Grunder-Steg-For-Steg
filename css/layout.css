@@ -1,0 +1,60 @@
+:root{
+  --bg:#0b0c10;
+  --surface:#101218;
+  --card:#121623;
+  --fg:#e6e8ee;
+  --muted:#9aa3b2;
+  --line:#22293a;
+  --brand:#5a7cff;
+  --accent:#00d1b2;
+}
+
+/* Bas */
+html,body{height:100%}
+body{
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* page-layout  */
+.page-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:auto 1fr auto;
+  min-height:100svh;
+  width:100%;
+}
+
+.header { 
+position: sticky;
+top: 0;
+z-index: 1000;    
+width:100%; 
+border-bottom:1px solid var(--line); 
+background:var(--card); 
+}
+
+
+.main{
+  width:100%;
+  min-height:860px;
+  background: var(--surface);
+}
+
+.footer{
+  width:100%;
+  min-height:160px;
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+a{ 
+color:inherit; 
+}
+hr{ 
+border:0; 
+border-top:1px solid var(--line); 
+}
+.debug-outline > *{ 
+outline:1px dashed color-mix(in srgb, var(--fg) 20%, transparent); 
+}
