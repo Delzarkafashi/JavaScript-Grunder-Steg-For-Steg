@@ -3,28 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grundlayout</title>
+  <title>Product</title>
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/klader-steg1.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
   <div class="page-grid">
-    <header class="header">
-    <script src="scripts/header-shrink-on-scroll.js" defer></script>
-    <header-intro-cmp></header-intro-cmp>
+        <header class="header">
+          <div class="header-grid">
+            <a class="logo" href="/">
+              <img src="assets/images/shoplogo.png" alt="Strongheart" class="logo-img">
+            </a>
 
-    </header>
+            <form class="search" role="search">
+              <input type="search" class="search-input" placeholder="Sök produkter…">
+              <button class="search-btn" type="submit">Sök</button>
+            </form>
+
+            <button class="darkmod" type="button" aria-label="Växla tema">🌓</button>
+
+            <div class="LogSingIn">
+              <button class="logsingin">LogSingIn</button>
+            </div>
+
+            <button class="hamburger" aria-label="Meny" aria-expanded="false">☰</button>
+
+            <nav class="menu-links">
+              <a href="./index.html">Home</a>
+              <a href="./produkter.html">Produkter</a>
+              <a href="./kontakt.html">Kontakt</a>
+            </nav>
+          </div>
+        </header>
 
     <main class="main" role="main">
-      <p>produkter</p>
+      <div class="page-namn"><h1>Produckts</h1></div>
+                <div class="product-grid">
+              <div class="parent-klader">
+                <section class="produkt-kort-klader">
+                  <h3 class="titel-klader"></h3>
+                  <div class="bild-klader"></div>
+                  <p class="beskrivning-klader"></p>
+                  <div class="pris-klader"></div>
+                  <button class="kop-knapp-klader" type="button">Köp</button>
+                </section>
+             </div>
+          </div>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <small>© fotter</small>
-    </footer>
-  </div>
-  <script type="module" src="./components/header.js"></script> 
+      <footer class="footer site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <section class="ft-col">
+            <h3>Kontakt</h3>
+            <p>Strongheart Shop</p>
+            <p>E-post: <a href="mailto:support@strongheart.se">support@strongheart.se</a></p>
+            <p>Tel: 08-123 45 67</p>
+            <p>Öppet: Mån–Fre 10–16</p>
+            </section>
+
+            <section class="ft-col">
+            <h3>Sociala medier</h3>
+            <ul class="ft-links">
+                <li>
+                    <a href="#" aria-label="Instagram">
+                    <img src="assets/images/icons8-instagram-logo-48.png" alt="" class="ft-icon">
+                    Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Facebook">
+                    <img src="assets/images/icons8-facebook-logo-48.png" alt="" class="ft-icon">
+                    Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="YouTube">
+                    <img src="assets/images/icons8-youtube-48.png" alt="" class="ft-icon">
+                    YouTube
+                    </a>
+                </li>
+            </ul>
+
+            </section>
+
+            <section class="ft-col">
+            <h3>Hjälp & info</h3>
+            <ul class="ft-links">
+                <li><a href="#">Kundservice</a></li>
+                <li><a href="#">Leverans & returer</a></li>
+                <li><a href="#">Köpvillkor</a></li>
+                <li><a href="#">Integritet</a></li>
+            </ul>
+            </section>
+        </div>
+      </footer>
+    </div>
+  <script type="module" src="./js/hamburger.js"></script> 
 
 </body>
 </html>

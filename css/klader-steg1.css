@@ -1,0 +1,98 @@
+.parent-klader {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  width: 320px; 
+  height: 480px;
+}
+
+/* Huvudkort */
+.produkt-kort-klader {
+  grid-area: 1 / 1 / 10 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--fg);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.produkt-kort-klader:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px rgba(90, 124, 255, 0.25);
+}
+
+/* Titel */
+.titel-klader {
+  grid-area: 1 / 1 / 2 / 4;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Bild */
+.bild-klader {
+  grid-area: 2 / 1 / 7 / 4;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #202b44;
+}
+.bild-klader img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* Beskrivning */
+.beskrivning-klader {
+  grid-area: 7 / 1 / 8 / 4;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Pris */
+.pris-klader {
+  grid-area: 8 / 1 / 9 / 4;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--fg);
+  font-size: 1rem;
+}
+
+/* Köp-knapp */
+.kop-knapp-klader {
+  grid-area: 9 / 1 / 10 / 4;
+  align-self: stretch;
+  justify-self: stretch;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #3e5ea3, #2f4a84);
+  color: var(--fg);
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+.kop-knapp-klader:hover {
+  background: linear-gradient(180deg, #4c70c0, #3a558a);
+  box-shadow: 0 0 10px rgba(90, 124, 255, 0.25);
+}
+.kop-knapp-klader:active {
+  transform: scale(0.98);
+}
