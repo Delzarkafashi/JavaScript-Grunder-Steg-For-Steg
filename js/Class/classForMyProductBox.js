@@ -1,4 +1,4 @@
-export class ProductJSFirstStep {
+export class ProductBox {
   constructor({ title, price, inStock, description = "", kategori = {} }) {
     this.title = title
     this.price = price
@@ -7,7 +7,7 @@ export class ProductJSFirstStep {
     this.kategori = kategori
   }
 
-  getProduktJSFirstStep() {
+  getProductBox() {
     const lagerText = this.inStock ? "I lager" : "Slut i lager"
     return `${this.title} – ${this.price} (${lagerText})`
   }
