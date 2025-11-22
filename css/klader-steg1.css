@@ -101,3 +101,44 @@
 .kop-knapp-klader:active {
   transform: scale(0.98);
 }
+
+/* css for pop up läsa mera */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-card-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.modal-card {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* liten knapp till "Läs mer" */
+.kop-knapp-klader-liten {
+  margin-top: 6px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #202b44;
+  color: var(--fg);
+  cursor: pointer;
+}
+.rating-text {
+  grid-column: 1 / 4;  
+  justify-self: center;   
+  text-align: center;      
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
