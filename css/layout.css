@@ -32,26 +32,42 @@ background:var(--card);
 }
 .main{
   width: 90%;
-  min-height: auto;
+  min-height: 700px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: column;      /* titel överst, grid under */
+  align-items: center;
   gap: 30px;
-  justify-content: center;
   background: var(--surface);
-  place-items: top;
-  margin-inline: auto; 
   padding-top: 180px;
   padding-bottom: 50px;
 }
+
 .page-namn{
-  flex: 0 0 100%;
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: center;     /* centrerad rubrik */
   align-items: center;
 }
+
+/* HÄR gör vi själva produkt-griden */
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;  /* mitten på bredden */
+  align-items: flex-start;
+  width: 100%;
+}
+
 
 /* 
 .main{
@@ -83,4 +99,16 @@ border-top:1px solid var(--line);
 }
 .debug-outline > *{ 
 outline:1px dashed color-mix(in srgb, var(--fg) 20%, transparent); 
+}
+
+/* css för WCAG-stöd*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
